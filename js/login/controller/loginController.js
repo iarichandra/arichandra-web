@@ -15,6 +15,8 @@ alert("Login");
 		    	  // handle the response
 		    	console.log("login response:::") ;
 		    	console.log(response);
+			    $scope.a = response.status;
+			    alert($scope.a);
 		    	}, {scope: 'public_profile,email'});
 	};
 		  
