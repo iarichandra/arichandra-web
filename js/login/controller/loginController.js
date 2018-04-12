@@ -29,7 +29,7 @@ alert("Login");
 		  
 		   $scope.testAPI=function() {
 		    console.log('Welcome!  Fetching your information.... ');
-		    FB.api('/me', function(response) {
+		    FB.api('/me',{ fields: 'id,name,first_name,last_name,gender,age_range,link,locale,email'}, function(response) {
 		      console.log('Successful login for: ' + response.name);
 			    console.log(response);
 		      document.getElementById('status').innerHTML =
